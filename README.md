@@ -2,7 +2,7 @@
 
 **Detect obvious population collapse before submitting a generative VEC prediction.**
 
-A generative submission can have the correct shape and gene panel yet still be nearly one cell copied thousands of times. CollapseCheck inspects the predicted cell population itself and reports conservative diversity diagnostics.
+A generative submission can have the correct shape and gene panel yet still be nearly one cell copied thousands of times. CollapseCheck inspects the predicted cell population itself and reports conservative diversity diagnostics. By default it samples up to 1,024 cells for the heavier checks so large submissions remain cheap to audit.
 
 It does **not** compare against hidden data and does not claim that a diverse prediction is biologically correct.
 
@@ -39,4 +39,4 @@ pytest
 ruff check src tests
 ```
 
-The test suite includes end-to-end synthetic H5AD CLI tests for a repeated-cell collapse and a diverse population.
+The test suite includes end-to-end synthetic H5AD CLI tests for a repeated-cell collapse and a diverse population, plus sparse-matrix and sampling-parameter regression tests.
