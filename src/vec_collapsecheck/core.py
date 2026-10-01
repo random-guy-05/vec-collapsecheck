@@ -48,6 +48,10 @@ def analyze_matrix(
     n_cells, n_genes = map(int, matrix.shape)
     if n_cells < 2 or n_genes < 1:
         raise ValueError("expression matrix must contain at least 2 cells and 1 gene")
+    if max_cells < 2:
+        raise ValueError("max_cells must be at least 2")
+    if max_genes_for_rank < 1:
+        raise ValueError("max_genes_for_rank must be at least 1")
 
     rng = np.random.default_rng(seed)
     rows = (
