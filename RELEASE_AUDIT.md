@@ -14,7 +14,7 @@ The public GitHub Actions workflow runs on Python **3.10, 3.11, and 3.12** and r
 
 ## Integration coverage
 
-Synthetic AnnData CLI integration distinguishes repeated-cell collapse from a diverse generated population.
+Synthetic AnnData CLI integration distinguishes repeated-cell collapse from a diverse generated population. Core regression tests also cover sparse expression matrices and invalid sampling limits.
 
 All repository fixtures are synthetic or generated during tests. No restricted or withheld Virtual Embryo Challenge data is bundled.
 
